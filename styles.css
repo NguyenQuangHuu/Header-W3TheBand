@@ -1,20 +1,36 @@
+html,
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
 * {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
 }
-html {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+.clear {
+  clear: both;
+}
+
+.text-white {
+  color: white;
 }
 
 /* Header */
 #header {
   height: 46px;
   background-color: rgba(0, 0, 0, 0.774);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0;
+  z-index: 2;
 }
 
 #nav {
   list-style-type: none;
+  display: inline-block;
 }
 
 #nav > li {
@@ -35,6 +51,7 @@ html {
   line-height: 46px;
   padding: 0 24px;
   display: block;
+  transition: all 0.2s ease-in-out;
 }
 
 #nav li:hover .subnav {
@@ -62,10 +79,151 @@ html {
   padding: 0 12px;
   line-height: 38px;
 }
+.down-arrow {
+  font-size: 16px;
+}
 
+/* Search Button*/
+.btn {
+  float: right;
+}
+
+.btn:hover .btn__search {
+  background-color: #f44236;
+}
+
+.btn__search {
+  color: white;
+  font-size: 24px;
+  padding: 11px 19px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
 /* Slider */
 
 #slider {
-  /* background-color: aquamarine;
-  height: 800px; */
+  margin-top: 46px;
+  padding-top: 50%;
+  background: url(https://www.w3schools.com/w3images/ny.jpg) top center / cover
+    no-repeat;
+  position: relative;
+}
+
+.slider__content {
+  position: absolute;
+  text-align: center;
+  /* left: 0px;  */
+  /* /* right: 0px;*/
+  bottom: 47px;
+  color: white;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#slider .text__heading {
+  font-weight: 500;
+  font-size: 24px;
+}
+
+#slider .text__desc {
+  font-weight: 300;
+  margin-top: 25px;
+  font-size: 15px;
+}
+
+/* CONTENT SECTION*/
+#content {
+  width: 100%;
+}
+
+#content .content__section {
+  width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 64px 8px;
+}
+
+#content .content__section--heading,
+#content .content__section--subhead {
+  text-align: center;
+}
+
+#content .content__section--heading {
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+#content .content__section--subhead {
+  font-size: 15px;
+  opacity: 0.6;
+  padding: 24px 0px;
+  font-style: italic;
+}
+
+#content .content__desc {
+  font-weight: 400;
+  font-size: 15px;
+  text-align: justify;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+.teams__section {
+  padding-top: 35px;
+}
+
+.team__info {
+  width: 33.33333%;
+  float: left;
+  text-align: center;
+}
+
+.team__info--name {
+  font-size: 15px;
+}
+
+.teams__section img {
+  margin-top: 12px;
+  width: 154px;
+  border-radius: 5px;
+  padding: 0;
+  margin: 0;
+}
+/* Tour Dates */
+.tour__dates {
+  background-color: black;
+}
+.tickets-list {
+  background-color: white;
+  margin-top: 12px;
+}
+
+.tickets-list li {
+  font-size: 15px;
+  padding: 11px 16px;
+  border-bottom: 1px solid #ddd;
+  color: #757575;
+  list-style-type: none;
+}
+
+.tickets-list .sold-out {
+  background-color: #ff4436;
+  padding: 3px 4px;
+  margin-left: 16px;
+  color: white;
+}
+
+.tickets-list .quantity {
+  background-color: black;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  /*Can giua dung line-height: chieu cao chinh no --height;*/
+  line-height: 24px;
+  float: right;
+  color: white;
+  margin-top: -3px;
 }
