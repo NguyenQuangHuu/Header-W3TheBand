@@ -53,25 +53,21 @@ body {
   left: 0px;
   right: 0;
   z-index: 1;
-  font-size:15px;
- 
+  font-size: 15px;
 }
 
 #nav {
   list-style-type: none;
   display: inline-block;
-  
 }
 
 #nav > li {
   display: inline-block;
-  
 }
 
 #nav li {
   position: relative;
   list-style-type: none;
-  
 }
 
 #nav > li > a {
@@ -215,6 +211,7 @@ body {
 
 .team__info--name {
   font-size: 15px;
+  margin-bottom: 24px;
 }
 
 .teams__section img {
