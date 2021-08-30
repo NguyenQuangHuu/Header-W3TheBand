@@ -17,6 +17,33 @@ body {
   color: white;
 }
 
+.row {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.col {
+  float: left;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.col-3 {
+  width: 33.33333%;
+}
+
+.col-2 {
+  width: 50%;
+}
+
+.col-1 {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
 /* Header */
 #header {
   height: 46px;
@@ -233,13 +260,8 @@ body {
   margin-left: -8px;
   margin-right: -8px;
   margin-bottom:32px; */
-  margin: 32px -8px 48px;
-}
-
-.tour-item {
-  float: left;
-  width: 33.33333%;
-  padding: 0 8px;
+  margin-top: 32px;
+  margin-bottom: 48px;
 }
 
 .tour-image {
@@ -281,6 +303,7 @@ body {
   border-radius: 2px;
   font-size: 15px;
   font-weight: 400;
+  border: none;
 }
 
 .tour-info .buy-tickets:hover {
@@ -288,4 +311,190 @@ body {
   background-color: #ccc;
 }
 
-/**/
+/* MODAL*/
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal .modal-container {
+  width: 900px;
+  min-height: 200px;
+  max-width: calc(100% - 32px);
+  background-color: white;
+  position: relative;
+  animation: modalAnimation ease 0.5s;
+}
+
+.modal .modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+.modal .modal-close:hover {
+  background-color: #ccc;
+  color: #000;
+}
+
+.modal .modal-header {
+  height: 130px;
+  background-color: #009688;
+  color: white;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+  font-size: 30px;
+}
+
+.modal .bag-icon {
+  margin-right: 10px;
+}
+
+.modal-body {
+  padding: 16px;
+}
+
+.modal-label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.modal-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  margin-bottom: 24px;
+}
+
+.btn-pay {
+  font-size: 19px;
+  font-weight: 500;
+  letter-spacing: 1px;
+
+  padding: 16px 0px;
+  width: 100%;
+  background-color: #009688;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-pay:hover {
+  color: black;
+  background-color: #ccc;
+}
+
+.modal-footer {
+  text-align: right;
+  margin-top: 20px;
+  font-size: 15px;
+  height: 50px;
+}
+
+.modal-link {
+  color: #2196f3;
+}
+
+.open-modal {
+  display: flex;
+}
+
+/* CONTACT  */
+.contact-padding {
+  margin-bottom: 124px;
+}
+
+.contact-container {
+  margin-top: 35px;
+}
+
+.contact-left {
+  font-size: 18px;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.contact-left ion-icon {
+  padding-right: 14px;
+  margin-bottom: -2px;
+  font-size: 18px;
+}
+
+.form-group {
+  font-size: 15px;
+}
+
+.form-group .form-control {
+  border: 1px solid #ccc;
+  padding: 8px;
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.form-group .form-submit {
+  float: right;
+  background-color: #000;
+  color: white;
+  padding: 8px 16px;
+  margin: 8px 0px;
+  cursor: pointer;
+  border: none;
+}
+
+.form-submit:hover {
+  background-color: #ccc;
+  color: #000;
+}
+
+/* MAP */
+.map .map-image {
+  width: 100%;
+}
+
+/* FOOTER */
+.footer{
+  color:#757575;
+  text-align: center;
+  padding:64px 16px;
+}
+
+.footer .logo-container{
+  padding-bottom:16px;
+  font-size:30px;
+}
+
+.logo-icon:hover{
+  opacity:0.7;
+}
+
+.author{
+  font-size:15px
+}
+
+@keyframes modalAnimation {
+  from {
+    opacity: 0.4;
+    transform: translateY(-80%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
