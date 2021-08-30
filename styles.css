@@ -227,3 +227,65 @@ body {
   color: white;
   margin-top: -3px;
 }
+
+.tours-place {
+  /* margin-top: 32px;
+  margin-left: -8px;
+  margin-right: -8px;
+  margin-bottom:32px; */
+  margin: 32px -8px 48px;
+}
+
+.tour-item {
+  float: left;
+  width: 33.33333%;
+  padding: 0 8px;
+}
+
+.tour-image {
+  width: 100%;
+}
+
+.tour-image:hover {
+  opacity: 0.6;
+}
+
+.tour-info {
+  background-color: white;
+  padding: 16px;
+  font-size: 15px;
+}
+
+.tour-info .tour-heading {
+  font-size: 15px;
+  margin: 15px 0px;
+}
+
+.tour-date {
+  margin: 15px 0px;
+  font-weight: 200;
+}
+
+.tour-desc {
+  margin: 15px 0px;
+
+  font-weight: 400;
+}
+
+.buy-tickets {
+  text-decoration: none;
+  color: white;
+  background-color: #000;
+  padding: 10px 19px;
+  display: inline-block;
+  border-radius: 2px;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.tour-info .buy-tickets:hover {
+  color: #000;
+  background-color: #ccc;
+}
+
+/**/
