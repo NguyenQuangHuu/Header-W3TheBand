@@ -18,7 +18,7 @@
     <div id="header">
       <!-- #NAV MENU -->
       <ul id="nav">
-        <li><a href="#main">Home</a></li>
+        <li><a href="#">Home</a></li>
         <li><a href="#content">Band</a></li>
         <li><a href="#tour-date">Tour</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -235,10 +235,15 @@
   const mobileMenu = document.querySelector('.js-mobile');
     
   const menuItems = document.querySelectorAll('#nav li a[href*="#"');
+
+ 
   
   for (const menuItem of menuItems){
     menuItem.onclick = function(){
-      header.style.height = null;
+      const subMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+
+      if(subMenu){event.preventDefault()}else{header.style.height = null;}
+      
     }
   }
 
@@ -254,6 +259,10 @@
       header.style.height = null;
     }
   }
+
+
+
+
 
   function closeModalF(){
     selectModal.classList.remove('open-modal');
