@@ -5,8 +5,8 @@
   <script src="script.js"></script>
 
 
-  <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" href="reponsive.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
@@ -18,15 +18,16 @@
     <div id="header">
       <!-- #NAV MENU -->
       <ul id="nav">
-        <li><a href="">Home</a></li>
-        <li><a href="">Band</a></li>
-        <li><a href="">Tour</a></li>
-        <li><a href="">Contact</a></li>
-        <li><a href="">More<ion-icon name="caret-down-outline"></ion-icon></a>
+        <li><a href="#main">Home</a></li>
+        <li><a href="#content">Band</a></li>
+        <li><a href="#tour-date">Tour</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <!-- <li><a href="#map" class="mobile-merch">Merch</a></li> -->
+        <li><a href="#">More<ion-icon name="caret-down-outline"></ion-icon></a>
           <ul class="subnav">
-            <li><a href="">Mechandise</a></li>
-            <li><a href="">Extra</a></li>
-            <li><a href="">Media</a></li>
+            <li><a href="#">Mechandise</a></li>
+            <li><a href="#">Extra</a></li>
+            <li><a href="#">Media</a></li>
           </ul>
         </li>
       </ul>
@@ -35,7 +36,11 @@
       <div class="btn">
         <ion-icon name="search" class="btn__search"></ion-icon>
       </div>
+      <div class="mobile js-mobile">
+        <ion-icon name="menu-outline" class="mobile-menu"></ion-icon>
+      </div>
     </div>
+    <!-- Slider -->
     <div id="slider">
       <div class="slider__content">
         <h3 class="text__heading">New York</h3>
@@ -75,7 +80,7 @@
           <div class="clear"></div>
         </div>
       </div>
-      <div class="tour__dates">
+      <div id="tour-date" class="tour__dates">
         <div class="content__section">
           <h2 class="content__section--heading text-white">
             Tour Dates
@@ -127,7 +132,7 @@
           </div>
         </div>
       </div>
-      <div class="content__section contact-padding">
+      <div id="contact" class="content__section contact-padding">
         <h2 class="content__section--heading">
           Contacts
         </h2>
@@ -168,7 +173,7 @@
       </div>
 
     </div>
-    <div class="map">
+    <div class="map" id="map">
       <img src="https://www.w3schools.com/w3images/map.jpg" alt="Map" class="map-image">
     </div>
     <footer class="footer">
@@ -224,6 +229,31 @@
   const closeModal = document.querySelector('.js-modal-close');
 
   const containerModal = document.querySelector('.js-modal-container');
+
+  const header = document.querySelector("#header");
+
+  const mobileMenu = document.querySelector('.js-mobile');
+    
+  const menuItems = document.querySelectorAll('#nav li a[href*="#"');
+  
+  for (const menuItem of menuItems){
+    menuItem.onclick = function(){
+      header.style.height = null;
+    }
+  }
+
+
+  const headerHeight = header.clientHeight;
+
+
+  mobileMenu.onclick = function(){
+    var isClosed = header.clientHeight === headerHeight;
+    if(isClosed){
+      header.style.height = "auto";
+    }else{
+      header.style.height = null;
+    }
+  }
 
   function closeModalF(){
     selectModal.classList.remove('open-modal');

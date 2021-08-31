@@ -1,0 +1,17 @@
+@media (max-width: 740px) {
+  #nav {
+    display: block;
+  }
+  #nav > li:not(:first-child) {
+    display: block;
+  }
+  #header {
+    overflow: hidden;
+  }
+  .btn {
+    display: none;
+  }
+  .mobile-menu {
+    display: block;
+  }
+}
